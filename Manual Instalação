@@ -1,0 +1,10 @@
+https://mnpef.unifesspa.edu.br/images/arquivos/2018/ROGERIO_RUIZ_-_PRODUT_EDUCACIONAL.pdf
+
+Querido rogério
+
+Comandos no CMD
+ls -la
+chmod ugo+rwx *
+sudo chmod ugo+rwx *
+ls -la
+./ftdi_sio.h
