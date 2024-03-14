@@ -8,3 +8,4 @@ chmod ugo+rwx *
 sudo chmod ugo+rwx *
 ls -la
 ./ftdi_sio.h
+sudo modprobe ftdi_sio
