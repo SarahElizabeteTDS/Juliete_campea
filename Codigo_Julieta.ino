@@ -29,7 +29,7 @@ void loop()
     {
       praDireita(XX1, XX2); //XX2 é a velocidade do motor da direita, que devera ser menor. Testar se deve ou nao ir para tras na robotica
     }
-  }
+  }w
   else
   {
     if(is_black(sensorM) == false && is_black(sensorE) == false && is_black(sensorD) == false)
@@ -86,8 +86,6 @@ void praDireita(int velocidade1, int velocidade2)
   analogWrite(motor1, velocidade1); // Define a velocidade do motor 1 (esquerda) (velocidade +)
   analogWrite(motor2, velocidade2); // Define a velocidade do motor 2 (direita) (velocidade -)
 }
-
-
 
 //anotacoes adicionais da sarah
 
