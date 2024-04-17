@@ -23,14 +23,31 @@ void loop()
   {
     if(is_black(sensorE) == false) //se o sensor esquerdo estiver no branco
     {
-      
+      praEsquerda(XX1, XX2); //XX1 é a velocidade do motor da esquerda, que devera ser menor. Testar se deve ou nao ir para tras na robotica
     }
-    if else(is_black(sensorD) == false) //se o sensor esquerdo estiver no branco
+    else if(is_black(sensorD) == false) //se o sensor esquerdo estiver no branco
     {
-
+      praDireita(XX1, XX2); //XX2 é a velocidade do motor da direita, que devera ser menor. Testar se deve ou nao ir para tras na robotica
     }
-  }else{
-    
+  }
+  else
+  {
+    if(is_black(sensorM) == false && is_black(sensorE) == false && is_black(sensorD) == false)
+    {
+      praFrente(XX); //velocidade dos dois motores, porque os dois tem que ir pra frente na mesma velocidade
+    }
+    else if(is_black(sensorM) == false && is_black(sensorE) == true && is_black(sensorD) == true)
+    {
+      praFrente(XX); //velocidade dos dois motores, porque os dois tem que ir pra frente na mesma velocidade
+    }
+    else if(is_black(sensorM) == false && is_black(sensorE) == false && is_black(sensorD) == true)
+    {
+      praDireita(XX1, XX2); //XX2 é a velocidade do motor da direita, que devera ser menor. Testar se deve ou nao ir para tras na robotica
+    }
+    else if(is_black(sensorM) == false && is_black(sensorE) == true && is_black(sensorD) == false)
+    {
+      praEsquerda(XX1, XX2); //XX1 é a velocidade do motor da esquerda, que devera ser menor. Testar se deve ou nao ir para tras na robotica
+    }
   }
 }
 
@@ -39,7 +56,9 @@ bool is_black(int sensor)
   if(sensor >= 800)
   {
     return false;
-  }else{
+  }
+  else
+  {
     return true;
   }
 }
@@ -56,8 +75,8 @@ void praEsquerda(int velocidade1, int velocidade2)
 {
   digitalWrite(dir1, HIGH); // Define a direção do motor 1 para frente
   digitalWrite(dir2, LOW); // Define a direção do motor 2 para trás (ver se nao é bom deixar no high com uma vel mais baixa que o outro, vamos testar isso)
-  analogWrite(motor1, velocidade1); // Define a velocidade do motor 1 (esquerda) (velocidade +)
-  analogWrite(motor2, velocidade2); // Define a velocidade do motor 2 (direita) (velocidade -)
+  analogWrite(motor1, velocidade1); // Define a velocidade do motor 1 (esquerda) (velocidade -)
+  analogWrite(motor2, velocidade2); // Define a velocidade do motor 2 (direita) (velocidade +)
 }
 
 void praDireita(int velocidade1, int velocidade2)
@@ -67,3 +86,14 @@ void praDireita(int velocidade1, int velocidade2)
   analogWrite(motor1, velocidade1); // Define a velocidade do motor 1 (esquerda) (velocidade +)
   analogWrite(motor2, velocidade2); // Define a velocidade do motor 2 (direita) (velocidade -)
 }
+
+
+
+//anotacoes adicionais da sarah
+
+//verificar se os valores utilizados na função is_black correspondem adequadamente à leitura dos sensores.
+//mudar os valores que iniciam em XX.
+//testar as funcoes de movimento separadamente no robo depois.
+//ajustar as velocidades.
+//verificar se as condicoes estao certinhas
+//se tudo funcionar, tentar fazer um controle de proporcionalidade nas curvas.
