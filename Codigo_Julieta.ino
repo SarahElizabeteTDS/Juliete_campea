@@ -93,6 +93,6 @@ void praDireita(int velocidade1, int velocidade2)
 //mudar os valores que iniciam em XX.
 //testar as funcoes de movimento separadamente no robo depois.
 //ajustar as velocidades.
-//verificar se as condicoes estao certinhas
+//verificar se as condicoes estao certinhas.
 //se tudo funcionar, tentar fazer um controle de proporcionalidade nas curvas.
 //arrumar tambem a pinagem dos sensores e ver se os motores E e D correspondem, respectivamente, ao 1 e 2.
