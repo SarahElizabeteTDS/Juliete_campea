@@ -2,9 +2,9 @@ const int motor1 = 5; //velocidade motor 1 - de 0 a 255
 const int motor2 = 6; //velocidade motor 2 - de 0 a 255
 const int dir1 = 7; //direcao do motor 1 - HIGH ou LOW dir1 é esquerda
 const int dir2 = 8; //direcao do motor 2 - HIGH ou LOW dir2 é direita
-const int sensorE = XX; //sensor esquerda (ver a porta certinho na julieta quando voltar a robotica)
-const int sensorM = XX; //sensor meio
-const int sensorD = XX; //sensor direito
+const int sensorE = A0; //sensor esquerda (ver a porta certinho na julieta quando voltar a robotica)
+const int sensorM = A1; //sensor meio
+const int sensorD = A2; //sensor direito
 
 void setup() 
 {
